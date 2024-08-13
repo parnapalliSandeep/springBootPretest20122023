@@ -13,12 +13,16 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      my_input:
-        description: 'An input for the workflow'
+      environment:
+        description: 'Select the environment to deploy'
         required: true
-        options: ['a','b']
         default: 'default value'
-        type: string
+        type: choice
+        options:
+          - DEV
+          - QA
+          - UAT
+          - PROD
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
