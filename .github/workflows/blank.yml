@@ -16,6 +16,7 @@ on:
       my_input:
         description: 'An input for the workflow'
         required: true
+        options: ['a','b']
         default: 'default value'
         type: string
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
